@@ -1,0 +1,88 @@
+biometric-authentication (0.9.70-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: migrate from libfprint1 to libfprint2.
+    (Closes: 952671)
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Tue, 24 Nov 2020 15:39:09 +0800
+
+biometric-authentication (0.9.63-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ handsome_feng ]
+  * New upstream release. (Closes: #957042)
+  * debian/control: Add Rules-Requires-Root: no.
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Tue, 28 Apr 2020 15:20:51 +0000
+
+biometric-authentication (0.9.62-2) unstable; urgency=medium
+
+  [ jianglinxuan (droiing) ]
+  * Add alternate init script
+  * Clean up the automatically generated configuration files after
+    purge. (Closes: #916770)
+    - config file:
+        /etc/biometric-auth/biometric-drivers.conf
+        /home/every_user/.biometric_auth/UUID
+    - database file:
+        /var/lib/biometric-auth/biometric.db
+  * Modify the description information when a dbus error occurs and
+    update the translation file
+
+  [ handsome_feng ]
+  * debian/control:
+    - Bump standards-version to 4.4.0.
+    - Bump compat level to 12.
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Sat, 10 Aug 2019 10:46:44 +0800
+
+biometric-authentication (0.9.61-2) unstable; urgency=medium
+
+  * Change the configuration file to the configuration template file
+    - Rename biometric-drivers.conf to biometric-drivers.conf.template
+    - The default configuration template file is installed to
+      /usr/share/biometric-auth/
+      (Closes: #914764)
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Mon, 10 Dec 2018 10:58:34 +0800
+
+biometric-authentication (0.9.61-1) UNRELEASED; urgency=medium
+
+  * Implement the CFB mode of AES algorithm and replace the interface
+    using openssl
+    - OpenSSL's license is not compatible with GPL or LGPL, remove it
+  * Add the "bindnow" linker flag to the ELF binary
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Wed, 21 Nov 2018 11:19:50 +0800
+
+biometric-authentication (0.9.60-1) UNRELEASED; urgency=medium
+
+  * BugFix:
+    - Error in content caused by incorrect driver information
+    - The interface timeout period is too short, resulting in an
+      abnormal interrupt of the interaction process
+  * Adds API check functionality in biometric-auth-client.
+  * Optimize the biometric-auth-client interaction
+    - The index scope can be omitted when using the search operation
+    - Update the manpage of biometric-auth-client
+  * debian/control:
+    - Add dh-python, python3:any
+    - libgtk-3-dev -> libgtk2.0-dev
+  * Update project translation
+    - Add the translation for the biometric-auth-client
+    - Fix Chinese translation errors
+    - Add French, Portuguese, Russian and Spanish translation
+    - Remove unwanted translations
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Fri, 16 Nov 2018 12:14:25 +0800
+
+biometric-authentication (0.9.56-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #908197)
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Tue, 25 Sep 2018 17:09:55 +0800
