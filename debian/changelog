@@ -1,3 +1,10 @@
+biometric-authentication (0.9.70-1+deepin) unstable; urgency=medium
+
+  * Fix build on RISC-V
+  * 
+
+ -- Clansty <i@gao4.pw>  Wed, 16 Nov 2022 00:14:07 +0000
+
 biometric-authentication (0.9.70-1) unstable; urgency=medium
 
   * New upstream release.

@@ -1,0 +1,40 @@
+Description: Fix RISC-V build
+ biometric-authentication (0.9.70-1+deepin) unstable; urgency=medium
+ .
+   * Fix build on RISC-V
+   *
+Author: Clansty <i@gao4.pw>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2022-11-16
+
+--- biometric-authentication-0.9.70.orig/src/biometric-authenticationd.c
++++ biometric-authentication-0.9.70/src/biometric-authenticationd.c
+@@ -33,6 +33,7 @@
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <sys/file.h>
++#include <locale.h>
+ 
+ #include <biometric_common.h>
+ #include <biometric_version.h>
+--- biometric-authentication-0.9.70.orig/src/lib/biometric_common.c
++++ biometric-authentication-0.9.70/src/lib/biometric_common.c
+@@ -27,6 +27,7 @@
+ #include <dlfcn.h>
+ #include <libusb.h>
+ #include <syslog.h>
++#include <locale.h>
+ 
+ #include "biometric_intl.h"
+ #include "biometric_common.h"
